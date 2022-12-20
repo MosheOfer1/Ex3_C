@@ -11,8 +11,13 @@ int getline1(char s[])
 
     for (i = 0; i < LINE - 1 && (c = getchar()) != EOF && c != '\n'; ++i)
         s[i] = c;
-    if (c == '\n')
-        s[i++] = c;
+    if (i==0)
+    {
+        return 1;
+    }
+    
+    // if (c == '\n')
+    //     s[i++] = c;
     s[i] = '\0';
     return i;
 }
@@ -70,7 +75,7 @@ void print_lines(char *str)
     while (getline1(line) > 0)
     {
         if (substring(str, line)){
-            printf("%s", line); // print the line if it contains str
+            printf("%s\n", line); // print the line if it contains str
         }
     }
 }
