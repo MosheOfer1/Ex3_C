@@ -22,6 +22,7 @@ int main() {
     if (i < ARRAY_SIZE - 1) {
       printf(",");  // print a comma after each number except the last one
     }
+    printf("\n");
   }
 
   return 0;
