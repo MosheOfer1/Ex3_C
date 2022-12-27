@@ -9,9 +9,12 @@ int getline1(char s[])
 {
     int c, i;
 
-    for (i = 0; i < LINE - 1 && c != '\n'; ++i){
+    for (i = 0; i < LINE - 1 && c != '\n' && c!='\r'; ++i){
         if((c = getchar()) != EOF)
-            s[i] = c;
+            if(c != '\r')
+                s[i] = c;
+            else
+                s[i] = '\n';
         else
             return 0;
     }
