@@ -7,9 +7,9 @@
 // getline: read a line into s, return length
 int getline1(char s[])
 {
-    int c = 0;
+    int i = 0,c = 0;
 
-    for (int i = 0; i < LINE - 1 && c != '\n' && c!='\r'; ++i){
+    for (i = 0; i < LINE - 1 && c != '\n' && c!='\r'; ++i){
         if((c = getchar()) != EOF)
             if(c != '\r')
                 s[i] = c;
