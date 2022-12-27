@@ -1,16 +1,14 @@
-
 CC=gcc
-
 FLAGS= -Wall
 
 
-all: isort‬‬ txtfind
+all: txtfind isort
 
-txtfind:findTxt.c
+txtfind: findTxt.c
 	$(CC) $(FLAGS) findTxt.c -o txtfind
 	
 
-isort‬‬:sort.c
+isort: sort.c
 	$(CC) $(FLAGS) sort.c -o isort
 	
 
